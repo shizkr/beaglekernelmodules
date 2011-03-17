@@ -49,7 +49,7 @@ static int __init trainer_gpio_init(void)
         gpio_request(162, "sysfs");
         gpio_export(162, 1);
 
-	/* GPIO 132~135, 136, 137 */
+	/* Trainer GPIO 132~135, 136, 137 */
 	if ((gpio_request(132, "GPIO132") == 0) &&
 	    (gpio_direction_output(132, 1) == 0)) {
 		gpio_export(132, 0);
