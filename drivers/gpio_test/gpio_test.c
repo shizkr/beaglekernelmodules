@@ -134,12 +134,19 @@ void led_control(unsigned value)
  
 int main(void)
 {
-	int i = 10000;
-
+	int i=200000;
 
 	while(i--) {
-		led_control(i & 0x0F);
-		usleep(100000);
+		led_control(1);
+		usleep(i);
+		led_control(4);
+		usleep(i);
+		led_control(8);
+		usleep(i);
+		led_control(2);
+		usleep(i);
+		if ( i == 2000 ) i = 200000;
+		printf("%d\n", i);
 	}
 	return 0;
 }
